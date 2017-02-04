@@ -507,6 +507,7 @@
 				E507F94B1E46458D00D5ED62 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E507F94C1E46458D00D5ED62 /* Build configuration list for PBXNativeTarget "PontoTests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +516,7 @@
 				E507F94E1E46458D00D5ED62 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E507F94F1E46458D00D5ED62 /* Build configuration list for PBXNativeTarget "PontoUITests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +525,7 @@
 				E507F9511E46458D00D5ED62 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
