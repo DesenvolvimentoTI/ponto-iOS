@@ -11,10 +11,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Ponto" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginController" customModule="Ponto" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -48,9 +48,10 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="raV-ye-a7C">
                                 <rect key="frame" x="16" y="368" width="343" height="30"/>
                                 <color key="backgroundColor" red="0.28627450980392155" green="0.90980392156862744" blue="0.27058823529411763" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="tintColor" red="0.28627450980392155" green="0.0" blue="0.27058823529411763" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Logar"/>
                                 <connections>
+                                    <action selector="btn_logar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hls-IN-2Mc"/>
                                     <segue destination="gaV-iI-4sa" kind="show" id="znt-Ru-fYu"/>
                                 </connections>
                             </button>
@@ -71,15 +72,19 @@
                             <constraint firstAttribute="leadingMargin" secondItem="9Cc-PE-kp3" secondAttribute="leading" id="zNm-ff-bMc"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="txt_login" destination="elx-Nv-UCL" id="6Fh-mC-k4G"/>
+                        <outlet property="txt_senha" destination="9Cc-PE-kp3" id="WOw-sz-DhZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="24.800000000000001" y="35.532233883058474"/>
         </scene>
-        <!--View Controller-->
+        <!--Ponto Controller-->
         <scene sceneID="WYf-eD-3bk">
             <objects>
-                <viewController id="gaV-iI-4sa" customClass="ViewController" customModule="Ponto" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="gaV-iI-4sa" customClass="PontoController" customModule="Ponto" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="skt-NP-9NR"/>
                         <viewControllerLayoutGuide type="bottom" id="0XB-1C-El4"/>
@@ -95,15 +100,6 @@
                                     <navigationItem title="Controle de ponto" id="qOO-ZU-swH"/>
                                 </items>
                             </navigationBar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="Ea2-gQ-lhr">
-                                <rect key="frame" x="-13" y="58" width="400" height="200"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0kb-Lx-kd4">
-                                <rect key="frame" x="16" y="395.5" width="343" height="30"/>
-                                <color key="backgroundColor" red="0.28627450980000002" green="0.90980392160000001" blue="0.27058823529999998" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="tintColor" red="0.28627450980000002" green="0.0" blue="0.27058823529999998" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Registrar entrada"/>
-                            </button>
                             <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bTR-8W-VFP">
                                 <rect key="frame" x="0.0" y="618" width="375" height="49"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
@@ -119,20 +115,71 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="hHC-dH-Yni">
+                                <rect key="frame" x="16" y="395" width="343" height="150"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0kb-Lx-kd4">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="30"/>
+                                        <color key="backgroundColor" red="0.28627450980000002" green="0.90980392160000001" blue="0.27058823529999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Registrar entrada"/>
+                                        <connections>
+                                            <action selector="registraEntrada:" destination="gaV-iI-4sa" eventType="touchUpInside" id="zlt-wU-48C"/>
+                                        </connections>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vP8-6J-MFj" userLabel="Registrar intervalo">
+                                        <rect key="frame" x="0.0" y="40" width="343" height="30"/>
+                                        <color key="backgroundColor" red="0.28627450980000002" green="0.90980392160000001" blue="0.27058823529999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Registrar intervalo"/>
+                                        <connections>
+                                            <action selector="registraIntervalo:" destination="gaV-iI-4sa" eventType="touchUpInside" id="0tr-VW-Uaj"/>
+                                        </connections>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yCO-WX-N6q" userLabel="Sair intervalo">
+                                        <rect key="frame" x="0.0" y="80" width="343" height="30"/>
+                                        <color key="backgroundColor" red="0.28627450980000002" green="0.90980392160000001" blue="0.27058823529999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Sair intervalo"/>
+                                        <connections>
+                                            <action selector="sairIntervalo:" destination="gaV-iI-4sa" eventType="touchUpInside" id="TFc-oh-uBH"/>
+                                        </connections>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="osX-zr-Amc" userLabel="Registrar saida">
+                                        <rect key="frame" x="0.0" y="120" width="343" height="30"/>
+                                        <color key="backgroundColor" red="0.28627450980000002" green="0.90980392160000001" blue="0.27058823529999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Registrar saida"/>
+                                        <connections>
+                                            <action selector="registraSaida:" destination="gaV-iI-4sa" eventType="touchUpInside" id="bod-Pf-9Wl"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="Ea2-gQ-lhr">
+                                <rect key="frame" x="-13" y="58" width="400" height="200"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.27450980390000002" green="0.49803921569999998" blue="0.84313725490000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="0kb-Lx-kd4" firstAttribute="centerX" secondItem="bl0-kj-yiF" secondAttribute="centerX" id="AXK-8e-vf0"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="0kb-Lx-kd4" secondAttribute="leading" id="M8c-iH-m8d"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hHC-dH-Yni" secondAttribute="trailing" id="MuV-yh-zBb"/>
                             <constraint firstItem="Ea2-gQ-lhr" firstAttribute="top" secondItem="skt-NP-9NR" secondAttribute="bottom" constant="38" id="RSC-Xp-XNo"/>
                             <constraint firstItem="Ea2-gQ-lhr" firstAttribute="centerX" secondItem="bl0-kj-yiF" secondAttribute="centerX" id="SMB-al-oF7"/>
                             <constraint firstItem="OjY-v5-eqp" firstAttribute="top" secondItem="Ea2-gQ-lhr" secondAttribute="bottom" constant="3" id="ShH-UM-TBy"/>
-                            <constraint firstItem="0kb-Lx-kd4" firstAttribute="top" secondItem="OjY-v5-eqp" secondAttribute="bottom" constant="39" id="oON-H3-kdg"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="0kb-Lx-kd4" secondAttribute="trailing" id="s5M-7y-je5"/>
+                            <constraint firstItem="hHC-dH-Yni" firstAttribute="top" secondItem="OjY-v5-eqp" secondAttribute="bottom" constant="38.5" id="cY8-Im-Ywv"/>
+                            <constraint firstItem="hHC-dH-Yni" firstAttribute="leading" secondItem="bl0-kj-yiF" secondAttribute="leadingMargin" id="ph5-sd-htR"/>
+                            <constraint firstItem="hHC-dH-Yni" firstAttribute="centerX" secondItem="bl0-kj-yiF" secondAttribute="centerX" id="s2N-am-6Ow"/>
                             <constraint firstItem="Ea2-gQ-lhr" firstAttribute="height" secondItem="bl0-kj-yiF" secondAttribute="height" multiplier="0.3" id="sSd-ud-ay8"/>
                             <constraint firstItem="OjY-v5-eqp" firstAttribute="centerX" secondItem="bl0-kj-yiF" secondAttribute="centerX" id="xJ8-W3-6w1"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="btn_entra_intervalo" destination="vP8-6J-MFj" id="eYc-XC-5xK"/>
+                        <outlet property="btn_entrada" destination="0kb-Lx-kd4" id="gw9-w2-5U9"/>
+                        <outlet property="btn_sair" destination="osX-zr-Amc" id="rwT-M6-sza"/>
+                        <outlet property="btn_sair_intervalo" destination="yCO-WX-N6q" id="OHf-vQ-ia9"/>
+                        <outlet property="txt_relogio" destination="OjY-v5-eqp" id="S38-LN-5Xg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l0y-qp-yau" sceneMemberID="firstResponder"/>
             </objects>

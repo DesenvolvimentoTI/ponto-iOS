@@ -8,8 +8,11 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class LoginController: UIViewController {
 
+    @IBOutlet weak var txt_login: UITextField!
+    @IBOutlet weak var txt_senha: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -19,7 +22,10 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
+    @IBAction func btn_logar(_ sender: UIButton) {
+        
+    }
 
 }
 

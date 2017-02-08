@@ -8,13 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		E507F9221E46458D00D5ED62 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E507F9211E46458D00D5ED62 /* AppDelegate.swift */; };
-		E507F9241E46458D00D5ED62 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E507F9231E46458D00D5ED62 /* ViewController.swift */; };
+		E507F9241E46458D00D5ED62 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E507F9231E46458D00D5ED62 /* LoginController.swift */; };
 		E507F9271E46458D00D5ED62 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E507F9251E46458D00D5ED62 /* Main.storyboard */; };
 		E507F92A1E46458D00D5ED62 /* Ponto.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E507F9281E46458D00D5ED62 /* Ponto.xcdatamodeld */; };
 		E507F92C1E46458D00D5ED62 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E507F92B1E46458D00D5ED62 /* Assets.xcassets */; };
 		E507F92F1E46458D00D5ED62 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E507F92D1E46458D00D5ED62 /* LaunchScreen.storyboard */; };
 		E507F93A1E46458D00D5ED62 /* PontoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E507F9391E46458D00D5ED62 /* PontoTests.swift */; };
 		E507F9451E46458D00D5ED62 /* PontoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E507F9441E46458D00D5ED62 /* PontoUITests.swift */; };
+		E53F81BE1E4A8EC6009E1191 /* PontoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53F81BD1E4A8EC6009E1191 /* PontoController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +38,7 @@
 /* Begin PBXFileReference section */
 		E507F91E1E46458D00D5ED62 /* Ponto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ponto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E507F9211E46458D00D5ED62 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E507F9231E46458D00D5ED62 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E507F9231E46458D00D5ED62 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		E507F9261E46458D00D5ED62 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E507F9291E46458D00D5ED62 /* Ponto.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Ponto.xcdatamodel; sourceTree = "<group>"; };
 		E507F92B1E46458D00D5ED62 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +50,7 @@
 		E507F9401E46458D00D5ED62 /* PontoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PontoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E507F9441E46458D00D5ED62 /* PontoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PontoUITests.swift; sourceTree = "<group>"; };
 		E507F9461E46458D00D5ED62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E53F81BD1E4A8EC6009E1191 /* PontoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PontoController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,7 +102,8 @@
 			isa = PBXGroup;
 			children = (
 				E507F9211E46458D00D5ED62 /* AppDelegate.swift */,
-				E507F9231E46458D00D5ED62 /* ViewController.swift */,
+				E507F9231E46458D00D5ED62 /* LoginController.swift */,
+				E53F81BD1E4A8EC6009E1191 /* PontoController.swift */,
 				E507F9251E46458D00D5ED62 /* Main.storyboard */,
 				E507F92B1E46458D00D5ED62 /* Assets.xcassets */,
 				E507F92D1E46458D00D5ED62 /* LaunchScreen.storyboard */,
@@ -262,8 +265,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E53F81BE1E4A8EC6009E1191 /* PontoController.swift in Sources */,
 				E507F92A1E46458D00D5ED62 /* Ponto.xcdatamodeld in Sources */,
-				E507F9241E46458D00D5ED62 /* ViewController.swift in Sources */,
+				E507F9241E46458D00D5ED62 /* LoginController.swift in Sources */,
 				E507F9221E46458D00D5ED62 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
