@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6D1DDCA71E465E21006E278D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6D1DDCA61E465E21006E278D /* GoogleService-Info.plist */; };
 		E507F9221E46458D00D5ED62 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E507F9211E46458D00D5ED62 /* AppDelegate.swift */; };
 		E507F9241E46458D00D5ED62 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E507F9231E46458D00D5ED62 /* LoginController.swift */; };
 		E507F9271E46458D00D5ED62 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E507F9251E46458D00D5ED62 /* Main.storyboard */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6D1DDCA61E465E21006E278D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E507F91E1E46458D00D5ED62 /* Ponto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ponto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E507F9211E46458D00D5ED62 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E507F9231E46458D00D5ED62 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 				E507F92B1E46458D00D5ED62 /* Assets.xcassets */,
 				E507F92D1E46458D00D5ED62 /* LaunchScreen.storyboard */,
 				E507F9301E46458D00D5ED62 /* Info.plist */,
+				6D1DDCA61E465E21006E278D /* GoogleService-Info.plist */,
 				E507F9281E46458D00D5ED62 /* Ponto.xcdatamodeld */,
 			);
 			path = Ponto;
@@ -239,6 +242,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E507F92F1E46458D00D5ED62 /* LaunchScreen.storyboard in Resources */,
+				6D1DDCA71E465E21006E278D /* GoogleService-Info.plist in Resources */,
 				E507F92C1E46458D00D5ED62 /* Assets.xcassets in Resources */,
 				E507F9271E46458D00D5ED62 /* Main.storyboard in Resources */,
 			);
