@@ -8,7 +8,7 @@ target 'Ponto' do
   # Pods for Ponto
 pod 'Firebase'
 pod 'Firebase/Database’
-pod 'Firebase/Auth’
+pod 'Firebase/Auth'
 
   target 'PontoTests' do
     inherit! :search_paths
