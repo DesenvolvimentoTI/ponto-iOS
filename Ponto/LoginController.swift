@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class LoginController: UIViewController {
 
@@ -27,5 +28,30 @@ class LoginController: UIViewController {
         
     }
 
+    @IBAction func btn_cadastrar(_ sender: Any) {
+        
+        FIRAuth.auth()?.createUser(withEmail: txt_login.text!, password: txt_senha.text!, completion: { (usuario, erro) in
+            if erro == nil {//sucesso
+                print("Sucesso ao cadastrar usuário: \(erro?.localizedDescription)")
+                let alert = UIAlertController(title: "Sucesso", message: "Cadastro efetuado !", preferredStyle: UIAlertControllerStyle.alert)
+                alert.addAction(UIAlertAction(title: "OK", style: .default) )
+                self.present(alert, animated: true)
+                
+                
+                
+            }else{//erro
+                print("Erro ao cadastrar usuário: \(erro?.localizedDescription)")
+                
+                let alert = UIAlertController(title: "Erro", message: "\(erro!.localizedDescription)", preferredStyle: UIAlertControllerStyle.alert)
+                alert.addAction(UIAlertAction(title: "OK", style: .default) )
+                self.present(alert, animated: true)
+            }
+        })
+
+    }
+    
+    
+    
+    
 }
 
