@@ -55,14 +55,13 @@
                                     <segue destination="gaV-iI-4sa" kind="show" id="znt-Ru-fYu"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fXr-ki-sUx">
-                                <rect key="frame" x="132" y="420" width="111" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fXr-ki-sUx">
+                                <rect key="frame" x="132" y="419" width="111" height="30"/>
                                 <state key="normal" title="Cadastrar">
                                     <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="btn_cadastrar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ck0-PB-Ys5"/>
+                                    <action selector="btn_cadastrar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="V2f-E0-Kmp"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -74,9 +73,12 @@
                             <constraint firstAttribute="trailingMargin" secondItem="9Cc-PE-kp3" secondAttribute="trailing" id="QYY-qw-CTp"/>
                             <constraint firstAttribute="leadingMargin" secondItem="raV-ye-a7C" secondAttribute="leading" id="Vgq-hu-dgt"/>
                             <constraint firstItem="lNO-1h-Qhe" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="38" id="XeQ-zH-55B"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fXr-ki-sUx" secondAttribute="trailing" constant="116" id="b66-tI-BBw"/>
                             <constraint firstAttribute="trailingMargin" secondItem="raV-ye-a7C" secondAttribute="trailing" id="bjZ-sP-Pk8"/>
                             <constraint firstItem="lNO-1h-Qhe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gVx-OW-CzH"/>
                             <constraint firstItem="lNO-1h-Qhe" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.3" id="iBa-w4-h7b"/>
+                            <constraint firstItem="fXr-ki-sUx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="116" id="ibR-nP-xgW"/>
+                            <constraint firstItem="fXr-ki-sUx" firstAttribute="top" secondItem="raV-ye-a7C" secondAttribute="bottom" constant="21" id="qoe-8j-Sco"/>
                             <constraint firstAttribute="leadingMargin" secondItem="elx-Nv-UCL" secondAttribute="leading" id="xZ1-cn-8Em"/>
                             <constraint firstItem="raV-ye-a7C" firstAttribute="top" secondItem="9Cc-PE-kp3" secondAttribute="bottom" constant="20" id="z39-6I-Tmq"/>
                             <constraint firstAttribute="leadingMargin" secondItem="9Cc-PE-kp3" secondAttribute="leading" id="zNm-ff-bMc"/>
