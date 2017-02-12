@@ -16,6 +16,10 @@ class PontoController: UIViewController {
     @IBOutlet weak var btn_sair_intervalo: UIButton!
     @IBOutlet weak var btn_sair: UIButton!
     
+    var loginRecebido: String!
+    
+    @IBOutlet weak var usuarioLogado: UILabel!
+    
     var timer = Timer()
     
     var format = DateFormatter()
@@ -33,6 +37,8 @@ class PontoController: UIViewController {
         format.dateFormat = "hh:mm"
 
         // Do any additional setup after loading the view.
+        
+        usuarioLogado.text = loginRecebido
     }
     
     @objc func tick() {

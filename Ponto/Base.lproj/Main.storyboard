@@ -51,12 +51,15 @@
                                 <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Logar"/>
                                 <connections>
-                                    <action selector="btn_logar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hls-IN-2Mc"/>
-                                    <segue destination="gaV-iI-4sa" kind="show" id="znt-Ru-fYu"/>
+                                    <action selector="btn_logar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6vW-MM-zLi"/>
                                 </connections>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Qdr-7a-2Jl">
+                                <rect key="frame" x="132" y="419" width="68" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fXr-ki-sUx">
-                                <rect key="frame" x="132" y="419" width="111" height="30"/>
+                                <rect key="frame" x="153" y="419" width="68" height="30"/>
                                 <state key="normal" title="Cadastrar">
                                     <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -72,13 +75,12 @@
                             <constraint firstAttribute="trailingMargin" secondItem="elx-Nv-UCL" secondAttribute="trailing" id="Luk-86-m4e"/>
                             <constraint firstAttribute="trailingMargin" secondItem="9Cc-PE-kp3" secondAttribute="trailing" id="QYY-qw-CTp"/>
                             <constraint firstAttribute="leadingMargin" secondItem="raV-ye-a7C" secondAttribute="leading" id="Vgq-hu-dgt"/>
+                            <constraint firstItem="fXr-ki-sUx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="137" id="XDl-IG-dy7"/>
                             <constraint firstItem="lNO-1h-Qhe" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="38" id="XeQ-zH-55B"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="fXr-ki-sUx" secondAttribute="trailing" constant="116" id="b66-tI-BBw"/>
                             <constraint firstAttribute="trailingMargin" secondItem="raV-ye-a7C" secondAttribute="trailing" id="bjZ-sP-Pk8"/>
                             <constraint firstItem="lNO-1h-Qhe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gVx-OW-CzH"/>
                             <constraint firstItem="lNO-1h-Qhe" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.3" id="iBa-w4-h7b"/>
-                            <constraint firstItem="fXr-ki-sUx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="116" id="ibR-nP-xgW"/>
-                            <constraint firstItem="fXr-ki-sUx" firstAttribute="top" secondItem="raV-ye-a7C" secondAttribute="bottom" constant="21" id="qoe-8j-Sco"/>
+                            <constraint firstItem="fXr-ki-sUx" firstAttribute="top" secondItem="raV-ye-a7C" secondAttribute="bottom" constant="21" id="s8x-B7-ZRJ"/>
                             <constraint firstAttribute="leadingMargin" secondItem="elx-Nv-UCL" secondAttribute="leading" id="xZ1-cn-8Em"/>
                             <constraint firstItem="raV-ye-a7C" firstAttribute="top" secondItem="9Cc-PE-kp3" secondAttribute="bottom" constant="20" id="z39-6I-Tmq"/>
                             <constraint firstAttribute="leadingMargin" secondItem="9Cc-PE-kp3" secondAttribute="leading" id="zNm-ff-bMc"/>
@@ -87,6 +89,7 @@
                     <connections>
                         <outlet property="txt_login" destination="elx-Nv-UCL" id="6Fh-mC-k4G"/>
                         <outlet property="txt_senha" destination="9Cc-PE-kp3" id="WOw-sz-DhZ"/>
+                        <segue destination="gaV-iI-4sa" kind="show" identifier="enviarDadosLogin" id="tq4-cc-02J"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -171,6 +174,13 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="Ea2-gQ-lhr">
                                 <rect key="frame" x="-13" y="58" width="400" height="200"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="email usuario logado" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pYk-pw-Zcr">
+                                <rect key="frame" x="16" y="58" width="343" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.27450980390000002" green="0.49803921569999998" blue="0.84313725490000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -191,6 +201,7 @@
                         <outlet property="btn_sair" destination="osX-zr-Amc" id="rwT-M6-sza"/>
                         <outlet property="btn_sair_intervalo" destination="yCO-WX-N6q" id="OHf-vQ-ia9"/>
                         <outlet property="txt_relogio" destination="OjY-v5-eqp" id="S38-LN-5Xg"/>
+                        <outlet property="usuarioLogado" destination="pYk-pw-Zcr" id="rLO-PC-E94"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l0y-qp-yau" sceneMemberID="firstResponder"/>

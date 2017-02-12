@@ -26,6 +26,34 @@ class LoginController: UIViewController {
     
     @IBAction func btn_logar(_ sender: UIButton) {
         
+     FIRAuth.auth()?.signIn(withEmail: txt_login.text!, password: txt_senha.text!, completion: { (usuario, erro) in
+        if erro == nil {//sucesso
+         
+            print("Login com Sucesso: \(erro?.localizedDescription)")
+              self.performSegue(withIdentifier: "enviarDadosLogin", sender: self)
+          //  let alert = UIAlertController(title: "Sucesso", message: "Usuario logado", preferredStyle: UIAlertControllerStyle.alert)
+          //  alert.addAction(UIAlertAction(title: "OK", style: .default) )
+          //  self.present(alert, animated: true)
+            
+            
+            
+            
+        }else{//erro
+            print("Erro de login: \(erro?.localizedDescription)")
+            
+            let alert = UIAlertController(title: "Erro", message: "\(erro!.localizedDescription)", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default) )
+            self.present(alert, animated: true)
+        }
+
+       })
+
+        
+
+       
+    
+    
+        
     }
 
     @IBAction func btn_cadastrar(_ sender: Any) {
@@ -50,8 +78,26 @@ class LoginController: UIViewController {
 
     }
     
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "enviarDadosLogin"{
+                    print("passando email logado para Ponto Controller")
+                    let viewControllerDestino = segue.destination as! PontoController
+                    viewControllerDestino.loginRecebido = self.txt_login.text
+                    
+                    
+                    
+                    
+                    
+            }
+
+            
+            
+           
+            
+            
+    }
     
-    
-    
+
 }
 
