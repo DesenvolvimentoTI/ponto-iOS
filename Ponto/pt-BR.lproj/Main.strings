@@ -1,0 +1,39 @@
+
+/* Class = "UIButton"; normalTitle = "Registrar entrada"; ObjectID = "0kb-Lx-kd4"; */
+"0kb-Lx-kd4.normalTitle" = "Registrar entrada";
+
+/* Class = "UINavigationItem"; title = "Controle de ponto"; ObjectID = "1P8-vX-Fno"; */
+"1P8-vX-Fno.title" = "Controle de ponto";
+
+/* Class = "UITextField"; placeholder = "Senha"; ObjectID = "9Cc-PE-kp3"; */
+"9Cc-PE-kp3.placeholder" = "Senha";
+
+/* Class = "UITabBarItem"; title = "Lista"; ObjectID = "Ao4-E8-SEY"; */
+"Ao4-E8-SEY.title" = "Lista";
+
+/* Class = "UILabel"; text = "00:00"; ObjectID = "OjY-v5-eqp"; */
+"OjY-v5-eqp.text" = "00:00";
+
+/* Class = "UITextField"; placeholder = "Login"; ObjectID = "elx-Nv-UCL"; */
+"elx-Nv-UCL.placeholder" = "Login";
+
+/* Class = "UIButton"; normalTitle = "Cadastrar"; ObjectID = "fXr-ki-sUx"; */
+"fXr-ki-sUx.normalTitle" = "Cadastrar";
+
+/* Class = "UIButton"; normalTitle = "Registrar saida"; ObjectID = "osX-zr-Amc"; */
+"osX-zr-Amc.normalTitle" = "Registrar saida";
+
+/* Class = "UINavigationItem"; title = "Controle de ponto"; ObjectID = "qOO-ZU-swH"; */
+"qOO-ZU-swH.title" = "Controle de ponto";
+
+/* Class = "UIButton"; normalTitle = "Logar"; ObjectID = "raV-ye-a7C"; */
+"raV-ye-a7C.normalTitle" = "Logar";
+
+/* Class = "UITabBarItem"; title = "Inicio"; ObjectID = "vCJ-1Q-HYM"; */
+"vCJ-1Q-HYM.title" = "Inicio";
+
+/* Class = "UIButton"; normalTitle = "Registrar intervalo"; ObjectID = "vP8-6J-MFj"; */
+"vP8-6J-MFj.normalTitle" = "Registrar intervalo";
+
+/* Class = "UIButton"; normalTitle = "Sair intervalo"; ObjectID = "yCO-WX-N6q"; */
+"yCO-WX-N6q.normalTitle" = "Sair intervalo";
