@@ -19,6 +19,7 @@
 		E507F92F1E46458D00D5ED62 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E507F92D1E46458D00D5ED62 /* LaunchScreen.storyboard */; };
 		E507F93A1E46458D00D5ED62 /* PontoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E507F9391E46458D00D5ED62 /* PontoTests.swift */; };
 		E507F9451E46458D00D5ED62 /* PontoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E507F9441E46458D00D5ED62 /* PontoUITests.swift */; };
+		E536D5641E529D2600CC6035 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = E536D5631E529D2600CC6035 /* .gitignore */; };
 		E53F81BE1E4A8EC6009E1191 /* PontoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53F81BD1E4A8EC6009E1191 /* PontoController.swift */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +64,7 @@
 		E507F9401E46458D00D5ED62 /* PontoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PontoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E507F9441E46458D00D5ED62 /* PontoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PontoUITests.swift; sourceTree = "<group>"; };
 		E507F9461E46458D00D5ED62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E536D5631E529D2600CC6035 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		E53F81BD1E4A8EC6009E1191 /* PontoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PontoController.swift; sourceTree = "<group>"; };
 		E6E5A2A7FB0DA102DDEAE71D /* Pods_PontoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PontoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5119A051E4F5F4900B51204 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Main.strings"; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 		E507F9151E46458D00D5ED62 = {
 			isa = PBXGroup;
 			children = (
+				E536D5631E529D2600CC6035 /* .gitignore */,
 				E507F9201E46458D00D5ED62 /* Ponto */,
 				E507F9381E46458D00D5ED62 /* PontoTests */,
 				E507F9431E46458D00D5ED62 /* PontoUITests */,
@@ -292,6 +295,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E536D5641E529D2600CC6035 /* .gitignore in Resources */,
 				E507F92F1E46458D00D5ED62 /* LaunchScreen.storyboard in Resources */,
 				6D1DDCA71E465E21006E278D /* GoogleService-Info.plist in Resources */,
 				E507F92C1E46458D00D5ED62 /* Assets.xcassets in Resources */,
