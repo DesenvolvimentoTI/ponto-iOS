@@ -1,0 +1,17 @@
+{
+    "empresa":  {
+        "nome" : "Empresa teste",
+        "endereco" : "Rua Dr. José Passos Filho, 1 - Eng. Luciano Cavalcante",
+        "coordenadax" : -3.770312,
+        "coordenaday" : -38.483626
+    },
+    
+    "empregado" : {
+        "-Kd3EA-0lV5IfH2553js" : {
+            "carga_horaria" : 40,
+            "cargo" : "cargoTeste",
+            "email" : "serial@m.com",
+            "nome" : "Teste"
+        }
+    }
+}

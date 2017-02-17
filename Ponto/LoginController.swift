@@ -27,39 +27,36 @@ class LoginController: UIViewController {
     @IBAction func btn_logar(_ sender: UIButton) {
         
      FIRAuth.auth()?.signIn(withEmail: txt_login.text!, password: txt_senha.text!, completion: { (usuario, erro) in
-        if erro == nil {//sucesso
-         
-            print("Login com Sucesso: \(erro?.localizedDescription)")
-              self.performSegue(withIdentifier: "enviarDadosLogin", sender: self)
-          //  let alert = UIAlertController(title: "Sucesso", message: "Usuario logado", preferredStyle: UIAlertControllerStyle.alert)
-          //  alert.addAction(UIAlertAction(title: "OK", style: .default) )
-          //  self.present(alert, animated: true)
-            
-            
-            
-            
-        }else{//erro
-            print("Erro de login: \(erro?.localizedDescription)")
-            
-            let alert = UIAlertController(title: "Erro", message: "\(erro!.localizedDescription)", preferredStyle: UIAlertControllerStyle.alert)
-            alert.addAction(UIAlertAction(title: "OK", style: .default) )
-            self.present(alert, animated: true)
-        }
-
+            if erro == nil {//sucesso
+             
+                print("Login com Sucesso: \(erro?.localizedDescription)")
+                  self.performSegue(withIdentifier: "enviarDadosLogin", sender: self)
+              //  let alert = UIAlertController(title: "Sucesso", message: "Usuario logado", preferredStyle: UIAlertControllerStyle.alert)
+              //  alert.addAction(UIAlertAction(title: "OK", style: .default) )
+              //  self.present(alert, animated: true)
+                
+            }else{//erro
+                print("Erro de login: \(erro?.localizedDescription)")
+                
+                let alert = UIAlertController(title: "Erro", message: "\(erro!.localizedDescription)", preferredStyle: UIAlertControllerStyle.alert)
+                alert.addAction(UIAlertAction(title: "OK", style: .default) )
+                self.present(alert, animated: true)
+            }
        })
-
-        
-
-       
-    
-    
-        
     }
 
     @IBAction func btn_cadastrar(_ sender: Any) {
         
         FIRAuth.auth()?.createUser(withEmail: txt_login.text!, password: txt_senha.text!, completion: { (usuario, erro) in
             if erro == nil {//sucesso
+                
+                let ref = FIRDatabase.database().reference()
+                
+                
+                let empregado = Empregado.init(nome: "Teste", cargo: "cargoTeste", email: self.txt_login.text!, carga_horaria: 40)
+                        
+                ref.child("empregado").child(FIRAuth.auth()!.currentUser!.uid).setValue(empregado.toDictionary())
+                
                 print("Sucesso ao cadastrar usuário: \(erro?.localizedDescription)")
                 let alert = UIAlertController(title: "Sucesso", message: "Cadastro efetuado !", preferredStyle: UIAlertControllerStyle.alert)
                 alert.addAction(UIAlertAction(title: "OK", style: .default) )
@@ -75,29 +72,7 @@ class LoginController: UIViewController {
                 self.present(alert, animated: true)
             }
         })
-
+        
     }
-    
-
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "enviarDadosLogin"{
-                    print("passando email logado para Ponto Controller")
-                    let viewControllerDestino = segue.destination as! PontoController
-                    viewControllerDestino.loginRecebido = self.txt_login.text
-                    
-                    
-                    
-                    
-                    
-            }
-
-            
-            
-           
-            
-            
-    }
-    
-
 }
 

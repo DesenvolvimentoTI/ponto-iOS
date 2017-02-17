@@ -20,7 +20,11 @@
 		E507F93A1E46458D00D5ED62 /* PontoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E507F9391E46458D00D5ED62 /* PontoTests.swift */; };
 		E507F9451E46458D00D5ED62 /* PontoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E507F9441E46458D00D5ED62 /* PontoUITests.swift */; };
 		E536D5641E529D2600CC6035 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = E536D5631E529D2600CC6035 /* .gitignore */; };
+		E536D5681E52AD7A00CC6035 /* Empresa.swift in Sources */ = {isa = PBXBuildFile; fileRef = E536D5671E52AD7A00CC6035 /* Empresa.swift */; };
+		E536D56A1E52AEF200CC6035 /* Empregado.swift in Sources */ = {isa = PBXBuildFile; fileRef = E536D5691E52AEF200CC6035 /* Empregado.swift */; };
+		E536D56C1E52B0E400CC6035 /* Ponto.swift in Sources */ = {isa = PBXBuildFile; fileRef = E536D56B1E52B0E400CC6035 /* Ponto.swift */; };
 		E53F81BE1E4A8EC6009E1191 /* PontoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53F81BD1E4A8EC6009E1191 /* PontoController.swift */; };
+		E5E2B2621E5524BF008715BE /* empresa.json in Resources */ = {isa = PBXBuildFile; fileRef = E5E2B2611E5524BF008715BE /* empresa.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,7 +69,11 @@
 		E507F9441E46458D00D5ED62 /* PontoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PontoUITests.swift; sourceTree = "<group>"; };
 		E507F9461E46458D00D5ED62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E536D5631E529D2600CC6035 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		E536D5671E52AD7A00CC6035 /* Empresa.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Empresa.swift; sourceTree = "<group>"; };
+		E536D5691E52AEF200CC6035 /* Empregado.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Empregado.swift; sourceTree = "<group>"; };
+		E536D56B1E52B0E400CC6035 /* Ponto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ponto.swift; sourceTree = "<group>"; };
 		E53F81BD1E4A8EC6009E1191 /* PontoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PontoController.swift; sourceTree = "<group>"; };
+		E5E2B2611E5524BF008715BE /* empresa.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = empresa.json; sourceTree = "<group>"; };
 		E6E5A2A7FB0DA102DDEAE71D /* Pods_PontoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PontoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5119A051E4F5F4900B51204 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Main.strings"; sourceTree = "<group>"; };
 		F5119A061E4F5F4900B51204 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
@@ -125,6 +133,7 @@
 		E507F9151E46458D00D5ED62 = {
 			isa = PBXGroup;
 			children = (
+				E5E2B2611E5524BF008715BE /* empresa.json */,
 				E536D5631E529D2600CC6035 /* .gitignore */,
 				E507F9201E46458D00D5ED62 /* Ponto */,
 				E507F9381E46458D00D5ED62 /* PontoTests */,
@@ -157,6 +166,9 @@
 				E507F9301E46458D00D5ED62 /* Info.plist */,
 				6D1DDCA61E465E21006E278D /* GoogleService-Info.plist */,
 				E507F9281E46458D00D5ED62 /* Ponto.xcdatamodeld */,
+				E536D5671E52AD7A00CC6035 /* Empresa.swift */,
+				E536D5691E52AEF200CC6035 /* Empregado.swift */,
+				E536D56B1E52B0E400CC6035 /* Ponto.swift */,
 			);
 			path = Ponto;
 			sourceTree = "<group>";
@@ -300,6 +312,7 @@
 				6D1DDCA71E465E21006E278D /* GoogleService-Info.plist in Resources */,
 				E507F92C1E46458D00D5ED62 /* Assets.xcassets in Resources */,
 				E507F9271E46458D00D5ED62 /* Main.storyboard in Resources */,
+				E5E2B2621E5524BF008715BE /* empresa.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -462,7 +475,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E536D56A1E52AEF200CC6035 /* Empregado.swift in Sources */,
 				E53F81BE1E4A8EC6009E1191 /* PontoController.swift in Sources */,
+				E536D5681E52AD7A00CC6035 /* Empresa.swift in Sources */,
+				E536D56C1E52B0E400CC6035 /* Ponto.swift in Sources */,
 				E507F92A1E46458D00D5ED62 /* Ponto.xcdatamodeld in Sources */,
 				E507F9241E46458D00D5ED62 /* LoginController.swift in Sources */,
 				E507F9221E46458D00D5ED62 /* AppDelegate.swift in Sources */,
