@@ -37,26 +37,10 @@ class ListaController: UIViewController, UITableViewDelegate, UITableViewDataSou
                 let item = Ponto(entrada: entrada, entrada_intervalo: entrada_intervalo, saida_intervalo: saida_intervalo, saida: saida )
                 
                 self.items.append(item)
-                self.listaHoras.reloadData()
+                
             }
-        })
-        
-        self.ref.child("ponto").child(FIRAuth.auth()!.currentUser!.uid).observe(.childAdded, with: { (snapshot) in
             
-            if snapshot.exists(){
-                
-                let value = snapshot.value as? NSDictionary
-                let entrada = value?["entrada"] as! String
-                let entrada_intervalo = value?["entrada_intervalo"] as! String?
-                let saida_intervalo = value?["saida_intervalo"] as! String?
-                let saida = value?["saida"] as! String?
-                
-                
-                let item = Ponto(entrada: entrada, entrada_intervalo: entrada_intervalo, saida_intervalo: saida_intervalo, saida: saida )
-                
-                self.items.append(item)
-                self.listaHoras.reloadData()
-            }
+            self.listaHoras.reloadData()
         })
         
     }
@@ -110,9 +94,8 @@ class ListaController: UIViewController, UITableViewDelegate, UITableViewDataSou
         timeFormatter.dateFormat = "HH:mm:ss"
         timeFormatter.timeZone = NSTimeZone(name: "UTC") as TimeZone!
         
-        
-        print("Aqui")
-        cell.textLabel?.text = diaFormatter.string(from: entrada!) + " - " + timeFormatter.string(from: Date(timeIntervalSince1970: TimeInterval(tempo)))
+        cell.textLabel?.text = diaFormatter.string(from: entrada!)
+        cell.detailTextLabel?.text = timeFormatter.string(from: Date(timeIntervalSince1970: TimeInterval(tempo)))
         return cell
     }
 
