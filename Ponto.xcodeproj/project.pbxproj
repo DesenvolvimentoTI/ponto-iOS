@@ -26,6 +26,7 @@
 		E53F81BE1E4A8EC6009E1191 /* PontoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53F81BD1E4A8EC6009E1191 /* PontoController.swift */; };
 		E5E2B2621E5524BF008715BE /* empresa.json in Resources */ = {isa = PBXBuildFile; fileRef = E5E2B2611E5524BF008715BE /* empresa.json */; };
 		E5FF71501E5876F3008074E7 /* ListaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FF714F1E5876F3008074E7 /* ListaController.swift */; };
+		F5117D661E58BB75002A97DE /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5117D651E58BB75002A97DE /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		E5E2B2611E5524BF008715BE /* empresa.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = empresa.json; sourceTree = "<group>"; };
 		E5FF714F1E5876F3008074E7 /* ListaController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListaController.swift; sourceTree = "<group>"; };
 		E6E5A2A7FB0DA102DDEAE71D /* Pods_PontoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PontoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5117D651E58BB75002A97DE /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		F5119A051E4F5F4900B51204 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Main.strings"; sourceTree = "<group>"; };
 		F5119A061E4F5F4900B51204 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -86,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5117D661E58BB75002A97DE /* CoreLocation.framework in Frameworks */,
 				0B785DFBD2739DD65D178885 /* Pods_Ponto.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -112,6 +115,7 @@
 		B641519D50A5361A01DCBD75 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F5117D651E58BB75002A97DE /* CoreLocation.framework */,
 				A137FC3C2DC35A227DDDA617 /* Pods_Ponto.framework */,
 				7A8EF0EEF343DF6DEC6F8446 /* Pods_PontoTests.framework */,
 				E6E5A2A7FB0DA102DDEAE71D /* Pods_PontoUITests.framework */,

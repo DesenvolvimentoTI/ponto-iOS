@@ -13,11 +13,11 @@ class Empresa: NSObject {
     
     var nome : String
     var endereco: String
-    var coordenadax: CLong
-    var coordenaday : CLong
+    var coordenadax: Double
+    var coordenaday : Double
     
     
-    init (nome: String, endereco: String, coordenadax:CLong, coordenaday: CLong){
+    init (nome: String, endereco: String, coordenadax:Double, coordenaday: Double){
         self.nome = nome
         self.endereco = endereco
         self.coordenadax = coordenadax
