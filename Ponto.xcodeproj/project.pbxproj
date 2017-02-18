@@ -25,6 +25,7 @@
 		E536D56C1E52B0E400CC6035 /* Ponto.swift in Sources */ = {isa = PBXBuildFile; fileRef = E536D56B1E52B0E400CC6035 /* Ponto.swift */; };
 		E53F81BE1E4A8EC6009E1191 /* PontoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53F81BD1E4A8EC6009E1191 /* PontoController.swift */; };
 		E5E2B2621E5524BF008715BE /* empresa.json in Resources */ = {isa = PBXBuildFile; fileRef = E5E2B2611E5524BF008715BE /* empresa.json */; };
+		E5FF71501E5876F3008074E7 /* ListaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FF714F1E5876F3008074E7 /* ListaController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,7 @@
 		E536D56B1E52B0E400CC6035 /* Ponto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ponto.swift; sourceTree = "<group>"; };
 		E53F81BD1E4A8EC6009E1191 /* PontoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PontoController.swift; sourceTree = "<group>"; };
 		E5E2B2611E5524BF008715BE /* empresa.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = empresa.json; sourceTree = "<group>"; };
+		E5FF714F1E5876F3008074E7 /* ListaController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListaController.swift; sourceTree = "<group>"; };
 		E6E5A2A7FB0DA102DDEAE71D /* Pods_PontoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PontoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5119A051E4F5F4900B51204 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Main.strings"; sourceTree = "<group>"; };
 		F5119A061E4F5F4900B51204 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 				E507F9211E46458D00D5ED62 /* AppDelegate.swift */,
 				E507F9231E46458D00D5ED62 /* LoginController.swift */,
 				E53F81BD1E4A8EC6009E1191 /* PontoController.swift */,
+				E5FF714F1E5876F3008074E7 /* ListaController.swift */,
 				E507F9251E46458D00D5ED62 /* Main.storyboard */,
 				E507F92B1E46458D00D5ED62 /* Assets.xcassets */,
 				E507F92D1E46458D00D5ED62 /* LaunchScreen.storyboard */,
@@ -476,6 +479,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E536D56A1E52AEF200CC6035 /* Empregado.swift in Sources */,
+				E5FF71501E5876F3008074E7 /* ListaController.swift in Sources */,
 				E53F81BE1E4A8EC6009E1191 /* PontoController.swift in Sources */,
 				E536D5681E52AD7A00CC6035 /* Empresa.swift in Sources */,
 				E536D56C1E52B0E400CC6035 /* Ponto.swift in Sources */,

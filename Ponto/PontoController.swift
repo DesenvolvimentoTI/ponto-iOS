@@ -19,11 +19,7 @@ class PontoController: UIViewController {
     
     var ref: FIRDatabaseReference!
     
-    var empregado : Empregado!
-    
     var pontoID : String?
-    
-    @IBOutlet weak var usuarioLogado: UILabel!
     
     var timer = Timer()
     
@@ -43,28 +39,13 @@ class PontoController: UIViewController {
         
         self.ref = FIRDatabase.database().reference()
         
-        self.ref.child("empregado").child(FIRAuth.auth()!.currentUser!.uid).observeSingleEvent(of: .value, with: { (snapshot) in
-            
-             if snapshot.exists(){
-
-                let value = snapshot.value as? NSDictionary
-                let nome = value?["nome"] as! String
-                let cargo = value?["cargo"] as! String
-                let email = value?["email"] as! String
-                let carga_horaria = value?["carga_horaria"] as! Float
-                self.empregado = Empregado.init(nome: nome, cargo: cargo, email: email, carga_horaria: carga_horaria)
-            
-            }
-            self.usuarioLogado.text = FIRAuth.auth()?.currentUser?.uid
-        })
-        
         self.ref.child("ponto").child(FIRAuth.auth()!.currentUser!.uid).observe(.childAdded, with: { (snapshot) in
             
             if snapshot.exists(){
                 self.pontoID = snapshot.key
             }
         })
-        
+
         // Do any additional setup after loading the view.
         
        
