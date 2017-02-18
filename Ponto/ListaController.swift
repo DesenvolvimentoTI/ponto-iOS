@@ -22,7 +22,7 @@ class ListaController: UIViewController, UITableViewDelegate, UITableViewDataSou
 
         self.ref = FIRDatabase.database().reference()
         
-        self.ref.child("ponto").child(FIRAuth.auth()!.currentUser!.uid).observeSingleEvent(of: .value, with: { (snapshot) in
+        self.ref.child("ponto").child(FIRAuth.auth()!.currentUser!.uid).observe( .value, with: { (snapshot) in
             self.items.removeAll()
             for snapshotChild in snapshot.children {
                 let child = snapshotChild as! FIRDataSnapshot

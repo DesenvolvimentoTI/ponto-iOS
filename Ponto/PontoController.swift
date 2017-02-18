@@ -53,7 +53,6 @@ class PontoController: UIViewController, CLLocationManagerDelegate {
         //Custom Format for clock
         format.dateFormat = "hh:mm"
         
-        
         self.ref = FIRDatabase.database().reference()
         
         self.ref.child("empresa").observeSingleEvent(of: .value, with: { (snapshot) in
@@ -63,14 +62,8 @@ class PontoController: UIViewController, CLLocationManagerDelegate {
                 let coordenadax = value?["coordenadax"] as! Double
                 let coordenaday = value?["coordenaday"] as! Double
                 self.posEmpresa = CLLocation(latitude: coordenadax, longitude: coordenaday)
-                
-                
-
-                
             }
         })
-        
-
         
         self.ref.child("ponto").child(FIRAuth.auth()!.currentUser!.uid).observe(.childAdded, with: { (snapshot) in
             
