@@ -31,10 +31,6 @@ class LoginController: UIViewController {
              
                 print("Login com Sucesso: \(erro?.localizedDescription)")
                   self.performSegue(withIdentifier: "enviarDadosLogin", sender: self)
-              //  let alert = UIAlertController(title: "Sucesso", message: "Usuario logado", preferredStyle: UIAlertControllerStyle.alert)
-              //  alert.addAction(UIAlertAction(title: "OK", style: .default) )
-              //  self.present(alert, animated: true)
-                
             }else{//erro
                 print("Erro de login: \(erro?.localizedDescription)")
                 
@@ -50,19 +46,14 @@ class LoginController: UIViewController {
         FIRAuth.auth()?.createUser(withEmail: txt_login.text!, password: txt_senha.text!, completion: { (usuario, erro) in
             if erro == nil {//sucesso
                 
-                let ref = FIRDatabase.database().reference()
-                
+                let ref = FIRDatabase.database().reference()                
                 
                 let empregado = Empregado.init(nome: "Teste", cargo: "cargoTeste", email: self.txt_login.text!, carga_horaria: 40)
                         
                 ref.child("empregado").child(FIRAuth.auth()!.currentUser!.uid).setValue(empregado.toDictionary())
                 
                 print("Sucesso ao cadastrar usuário: \(erro?.localizedDescription)")
-                let alert = UIAlertController(title: "Sucesso", message: "Cadastro efetuado !", preferredStyle: UIAlertControllerStyle.alert)
-                alert.addAction(UIAlertAction(title: "OK", style: .default) )
-                self.present(alert, animated: true)
-                
-                
+                self.performSegue(withIdentifier: "enviarDadosLogin", sender: self)
                 
             }else{//erro
                 print("Erro ao cadastrar usuário: \(erro?.localizedDescription)")
